@@ -1,6 +1,5 @@
 FROM node:20
-WORKDIR /Helium
+WORKDIR /helium
 COPY . .
 RUN npm install
-ENTRYPOINT ["npm run build"]
-CMD ["npm run dev"]
+ENTRYPOINT ["npm", "run", "dev"]

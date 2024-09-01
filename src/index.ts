@@ -62,7 +62,7 @@ bot.callbackQuery(nextButton, async (ctx) => {
 //This function would be added to the dispatcher as a handler for messages coming from the Bot API
 bot.on("message", async (ctx) => {
   //Print to console
-  console.log(ctx.message)
+  //console.log(`ctx.message ${ctx.from.first_name}`)
   // console.log(
   //   `${ctx.from.first_name} wrote ${
   //     "text" in ctx.message ? ctx.message.text : ""
@@ -76,7 +76,7 @@ bot.on("message", async (ctx) => {
     });
   } else {
     //This is equivalent to forwarding, without the sender's name
-    await ctx.copyMessage(ctx.message.chat.id);
+    await ctx.reply(`hi ${ctx.from.first_name}wow`);
   }
 });
 
